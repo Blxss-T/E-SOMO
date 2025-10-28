@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Members {
     private int id;
     private String name;
-    ArrayList<Books> borrowedBooks ;
+    private ArrayList<Books> borrowedBooks ;
     public Members(){}
 
     public Members(int id, String name) {
