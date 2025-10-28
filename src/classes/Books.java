@@ -12,6 +12,25 @@ public class Books {
         this.author=author;
         this.isBorrowed=false;
     }
+    public void displayInfo(){
+        System.out.println(title+"by"+author+"is"+isBorrowed);
+    }
+    public void borrowBook() {
+        if(!isBorrowed){
+            isBorrowed=true;
+            System.out.println("Borrowed successfully");
+        }else{
+            System.out.println("Ooops, Books already borrowed.");
+        }
+    }
+    public void returnBook(){
+        if(isBorrowed){
+            isBorrowed=false;
+            System.out.println("Book returned!");
+        }else{
+            System.out.println("Book not retruned yet!");
+        }
+    }
 
     public int getId() {
         return id;
