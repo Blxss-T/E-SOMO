@@ -33,7 +33,16 @@ public class Members {
             System.out.println(book.getTitle()+" has been successfully returned");
         }
     }
-    public voi
+    public void displayBorrowed(){
+        if (borrowedBooks.isEmpty()){
+            System.out.println("You have not borrowed nay books");
+        }else{
+            System.out.println(name+"'s borrowed books:");
+            for(Books b:borrowedBooks){
+                System.out.println("-"+b.getTitle()+ " by" +b.getAuthor());
+            }
+        }
+    }
 
     public int getId() {
         return id;
