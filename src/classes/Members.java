@@ -23,17 +23,19 @@ public class Members {
             borrowedBooks.add(book);
             System.out.println(name+" borrowed"+book.getTitle());
         }else {
-            System.out.println("Sorry "+book.getTitle()+" is already borrowed");
+          throw new BookUnavailableException ("Sorry "+book.getTitle()+" is already borrowed");
         }
     }
-    public void returnBook(Books book){
+    public void returnBook(Books book) throws BookUnavailableException{
         if(borrowedBooks.contains(book)){
             book.setBorrowed(false);
             borrowedBooks.remove(book);
             System.out.println(book.getTitle()+" has been successfully returned");
+        }else{
+            throw new BookUnavailableException("Book non existant");
         }
     }
-    public void displayBorrowed(){
+    public void displayBorrowed() throws BookUnavailableException{
         if (borrowedBooks.isEmpty()){
             System.out.println("You have not borrowed nay books");
         }else{
