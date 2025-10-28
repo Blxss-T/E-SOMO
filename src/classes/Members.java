@@ -1,4 +1,51 @@
 package classes;
 
+import java.sql.Struct;
+import java.util.ArrayList;
+
 public class Members {
+    private int id;
+    private String name;
+    ArrayList<Books> borrowedBooks ;
+    public Members(){}
+
+    public Members(int id, String name) {
+        this.id = id;
+        this.name = name;
+        this.borrowedBooks = new ArrayList<Books>();
+    }
+    public void displayInfo(){
+        System.out.println("ID"+id+"Name"+name+"Borrowed"+borrowedBooks);
+    }
+    public void borrowBook(Books book) throws BookUnavailableException{
+        if(book.isBorrowed()){
+            book.setBorrowed(true);
+            borrowedBooks.add(book);
+            System.out.println(name+" borrowed"+book.getTitle());
+        }
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public ArrayList<Books> getBorrowedBooks() {
+        return borrowedBooks;
+    }
+
+    public void setBorrowedBooks(ArrayList<Books> borrowedBooks) {
+        this.borrowedBooks = borrowedBooks;
+    }
 }
