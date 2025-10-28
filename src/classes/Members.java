@@ -22,8 +22,18 @@ public class Members {
             book.setBorrowed(true);
             borrowedBooks.add(book);
             System.out.println(name+" borrowed"+book.getTitle());
+        }else {
+            System.out.println("Sorry "+book.getTitle()+" is already borrowed");
         }
     }
+    public void returnBook(Books book){
+        if(borrowedBooks.contains(book)){
+            book.setBorrowed(false);
+            borrowedBooks.remove(book);
+            System.out.println(book.getTitle()+" has been successfully returned");
+        }
+    }
+    public voi
 
     public int getId() {
         return id;
