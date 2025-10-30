@@ -67,6 +67,8 @@ public class Books {
     @Override
     public String toString() {
         return "Books{" +
+                "id=" + id +
+
 
 
     }
