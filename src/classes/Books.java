@@ -63,4 +63,9 @@ public class Books {
     public void setBorrowed(boolean borrowed) {
         isBorrowed = borrowed;
     }
+
+    @Override
+    public String toString() {
+
+    }
 }
