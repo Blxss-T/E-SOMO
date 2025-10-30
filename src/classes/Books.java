@@ -68,6 +68,12 @@ public class Books {
     public String toString() {
         return "Books{" +
                 "id=" + id +
+                ", title='" + title + '\'' +
+                ", isBorrowed=" + isBorrowed +
+                '}';
+
+
+
 
 
 
