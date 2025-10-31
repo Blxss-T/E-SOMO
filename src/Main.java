@@ -13,7 +13,9 @@ public class Main {
         System.out.println("Enter your name: ");
         String name= sc.nextLine();
         member.setName(name);
-
+        System.out.println("What book do u want to borrow?");
+         String borrowBook=sc.nextLine();
+         member.borrowBook();
 
 
     }
