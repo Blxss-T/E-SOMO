@@ -3,13 +3,15 @@ import classes.Books;
 import classes.Library;
 import classes.Member;
 import classes.Members;
+import classes.fullLibrary;
+
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         Book book = new Book();
         Member member =new Member();
-        Library library = new Library();
+        fullLibrary library = new fullLibrary();
 
         Scanner sc =new Scanner(System.in);
         System.out.println("Enter your name: ");

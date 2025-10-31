@@ -24,7 +24,7 @@ public class fullLibrary {
             }
             reader.close();
         }catch(IOException e){
-
+            System.out.println("Error reading file:"+ e.getMessage());
         }
 
     }
@@ -51,7 +51,7 @@ public class fullLibrary {
         }
 
     }
-    public void removeMember(Member members){
+    public void removeMember(Member member){
         if(members.contains(member)){
             members.remove(member);
         }else{
