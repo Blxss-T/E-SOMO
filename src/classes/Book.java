@@ -1,12 +1,12 @@
 package classes;
 
-public class Books {
+public class Book {
     private int id;
     private String title;
     private String author;
     private boolean isBorrowed;
-    public Books(){}
-    public Books(int id, String title, String author,boolean isBorrowed){
+    public Book(){}
+    public Book(int id, String title, String author,boolean isBorrowed){
         int nextId = 0;
         this.id=nextId;
         nextId++;
@@ -68,7 +68,7 @@ public class Books {
 
     @Override
     public String toString() {
-        return "Books{" +
+        return "Book{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", isBorrowed=" + isBorrowed +

@@ -3,51 +3,51 @@ package classes;
 import java.util.ArrayList;
 
 public class Library {
-    private ArrayList<Books> totalBooks;
-    private ArrayList<Members> totalMembers;
+    private ArrayList<Books> books;
+    private ArrayList<Member> members;
    public  Library(){}
 
-    public Library(ArrayList<Books> totalBooks, ArrayList<Members> totalMembers) {
-        this.totalBooks = new ArrayList<>();
-        this.totalMembers = new ArrayList<>();
+    public Library() {
+        this.books = new ArrayList<>();
+        this.members = new ArrayList<>();
     }
-    public void addBook(Books book){
-       if(!totalBooks.contains(book)){
-           totalBooks.add(book);
+    public void addBook(Book book){
+       if(!books.contains(book)){
+           books.add(book);
        }else{
            System.out.println("Book already exists");
        }
 
     }
-    public void removeBook(Books book){
-        if(totalBooks.contains(book)){
-            totalBooks.remove(book);
+    public void removeBook(Book book){
+        if(books.contains(book)){
+            books.remove(book);
         }else{
             System.out.println("Book does not exists");
         }
     }
-    public void addMember(Members member){
-        if(!totalMembers.contains(member)){
-            totalMembers.add(member);
+    public void addMember(Member member){
+        if(!members.contains(member)){
+            members.add(member);
         }else{
             System.out.println("Member already exists");
         }
 
     }
-    public void removeMember(Members member){
-        if(totalMembers.contains(member)){
-            totalMembers.remove(member);
+    public void removeMember(Member members){
+        if(members.contains(member)){
+            members.remove(member);
         }else{
             System.out.println("Member does not exists");
         }
     }
     public void displayBooks(){
-       for (Books book:totalBooks){
+       for (Book book:books){
            book.displayInfo();
        }
     }
     public void displayMembers(){
-        for (Members member:totalMembers){
+        for (Member member:members){
             member.displayInfo();
         }
     }

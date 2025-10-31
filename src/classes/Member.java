@@ -1,23 +1,22 @@
 package classes;
 
-import java.sql.Struct;
 import java.util.ArrayList;
 
-public class Members {
+public class Member {
     private int id;
     private String name;
-    private ArrayList<Books> borrowedBooks ;
-    public Members(){}
+    private ArrayList<Book> borrowedBooks ;
+    public Member(){}
 
-    public Members(int id, String name) {
+    public Member(int id, String name) {
         this.id = id;
         this.name = name;
-        this.borrowedBooks = new ArrayList<Books>();
+        this.borrowedBooks = new ArrayList<Book>();
     }
     public void displayInfo(){
         System.out.println("ID"+id+"Name"+name+"Borrowed"+borrowedBooks);
     }
-    public void borrowBook(Books book) throws BookUnavailableException{
+    public void borrowBook(Book book) throws BookUnavailableException{
         if(book.isBorrowed()){
             book.setBorrowed(true);
             borrowedBooks.add(book);
@@ -26,7 +25,7 @@ public class Members {
           throw new BookUnavailableException ("Sorry "+book.getTitle()+" is already borrowed");
         }
     }
-    public void returnBook(Books book) throws BookUnavailableException{
+    public void returnBook(Book book) throws BookUnavailableException{
         if(borrowedBooks.contains(book)){
             book.setBorrowed(false);
             borrowedBooks.remove(book);
@@ -40,7 +39,7 @@ public class Members {
             System.out.println("You have not borrowed nay books");
         }else{
             System.out.println(name+"'s borrowed books:");
-            for(Books b:borrowedBooks){
+            for(Book b:borrowedBooks){
                 System.out.println("-"+b.getTitle()+ " by" +b.getAuthor());
             }
         }
@@ -62,11 +61,11 @@ public class Members {
         this.name = name;
     }
 
-    public ArrayList<Books> getBorrowedBooks() {
+    public ArrayList<Book> getBorrowedBooks() {
         return borrowedBooks;
     }
 
-    public void setBorrowedBooks(ArrayList<Books> borrowedBooks) {
+    public void setBorrowedBooks(ArrayList<Book> borrowedBooks) {
         this.borrowedBooks = borrowedBooks;
     }
 }
