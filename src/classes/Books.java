@@ -7,7 +7,9 @@ public class Books {
     private boolean isBorrowed;
     public Books(){}
     public Books(int id, String title, String author,boolean isBorrowed){
-        this.id=id;
+        int nextId = 0;
+        this.id=nextId;
+        nextId++;
         this.title=title;
         this.author=author;
         this.isBorrowed=false;
