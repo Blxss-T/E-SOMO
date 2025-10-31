@@ -20,7 +20,7 @@ public class fullLibrary {
             while(reader.hasNextLine()){
                 String line=reader.nextLine();
                 String [] data = line.split(",");
-                Book book =new Book(data[0],data[1])
+                Book book =new Book(data[0],data[1]);
             }
             reader.close();
         }catch(IOException e){
