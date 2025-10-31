@@ -1,6 +1,8 @@
 package classes;
 
 import java.util.ArrayList;
+import java.io.*;
+import java.util.Scanner;
 
 public class fullLibrary {
     private ArrayList<Book> books;
@@ -8,7 +10,21 @@ public class fullLibrary {
 
     public fullLibrary() {
         books = new ArrayList<>();
+        loadBooksFromFile();
         members = new ArrayList<>();
+    }
+    public void  loadBooksFromFile(){
+        try{
+            File file= new File ("books.txt");
+            Scanner reader =new Scanner(file);
+            while(reader.hasNextLine()){
+                String line=reader.nextLine();
+                books.add(line);
+            }
+        }catch(IOException e){
+
+        }
+
     }
     public void addBook(Book book){
        if(!books.contains(book)){
