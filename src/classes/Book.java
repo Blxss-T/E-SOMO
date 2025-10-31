@@ -1,15 +1,15 @@
 package classes;
 
 public class Book {
+    private static int nextId=1;
     private int id;
     private String title;
     private String author;
     private boolean isBorrowed;
     public Book(){}
-    public Book(int id, String title, String author,boolean isBorrowed){
-        int nextId = 0;
-        this.id=nextId;
-        nextId++;
+    public Book(String title, String author){
+        this.id=nextId++;
+
         this.title=title;
         this.author=author;
         this.isBorrowed=false;
