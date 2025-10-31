@@ -2,14 +2,13 @@ package classes;
 
 import java.util.ArrayList;
 
-public class Library {
-    private ArrayList<Books> books;
+public class fullLibrary {
+    private ArrayList<Book> books;
     private ArrayList<Member> members;
-   public  Library(){}
 
-    public Library() {
-        this.books = new ArrayList<>();
-        this.members = new ArrayList<>();
+    public fullLibrary() {
+        books = new ArrayList<>();
+        members = new ArrayList<>();
     }
     public void addBook(Book book){
        if(!books.contains(book)){
