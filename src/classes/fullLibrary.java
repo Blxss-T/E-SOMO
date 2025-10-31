@@ -19,8 +19,10 @@ public class fullLibrary {
             Scanner reader =new Scanner(file);
             while(reader.hasNextLine()){
                 String line=reader.nextLine();
-                books.add(line);
+                String [] data = line.split(",");
+                Book book =new Book(data[0],data[1])
             }
+            reader.close();
         }catch(IOException e){
 
         }
