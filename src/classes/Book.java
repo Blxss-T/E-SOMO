@@ -9,7 +9,6 @@ public class Book {
     public Book(){}
     public Book(String title, String author){
         this.id=nextId++;
-
         this.title=title;
         this.author=author;
         this.isBorrowed=false;
