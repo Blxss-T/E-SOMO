@@ -1,0 +1,10 @@
+Atomic Habits,James Clear
+The Alchemist,Paulo Coelho
+Java Basics,Bless Uwase
+Think and Grow Rich,Napoleon Hill
+The Power of Habit,Charles Duhigg
+Clean Code,Robert C. Martin
+The 7 Habits of Highly Effective People,Stephen Covey
+Rich Dad Poor Dad,Robert Kiyosaki
+Deep Work,Cal Newport
+The Lean Startup,Eric Ries
